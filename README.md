@@ -5,7 +5,7 @@ Kelas : TI-2A \
 NIM : 230102023 
 -
 ## Overview
-Sistem Informasi Penasehat Akademik JKB (SIWALI JKB) adalah sistem manajemen penasehat akademik yang komprehensif yang dirancang untuk menyederhanakan proses pengelolaan kinerja mahasiswa, konseling, dan data akademik lainnya untuk institusi pendidikan tinggi.
+Sistem Informasi Bimbingan Akademik JKB (SIWALI JKB) adalah sistem manajemen bimbingan akademik yang komprehensif yang dirancang untuk menyederhanakan proses pengelolaan kinerja mahasiswa, konseling, dan data akademik lainnya untuk institusi pendidikan tinggi.
 ## Task
 1. **membuat view berbasis OOP PHP dengan menerima data dari mySQL database (tabel reports, gpas dan gpa_details)**
 2. **menggunakan __construct sebagai link untuk menghubungan ke database**
