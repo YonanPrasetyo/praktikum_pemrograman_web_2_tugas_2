@@ -20,13 +20,13 @@
                             <a class='nav-link' href='tampil/reports_tampil.php'>reports</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='tampil/gpas_tampil_khusus.php'>gpa khusus</a>
+                            <a class='nav-link' href='tampil/gpas_khusus_tampil.php'>gpa khusus</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='tampil/gpa_details_tampil_khusus.php'>gpa details khusus</a>
+                            <a class='nav-link' href='tampil/gpa_details_khusus_tampil.php'>gpa details khusus</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='tampil/reports_tampil_khusus.php'>reports khusus</a>
+                            <a class='nav-link' href='tampil/reports_khusus_tampil.php'>reports khusus</a>
                         </li>
                     </ul>
                 </div>
