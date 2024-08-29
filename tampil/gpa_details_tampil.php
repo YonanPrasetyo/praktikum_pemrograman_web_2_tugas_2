@@ -1,12 +1,14 @@
 <?php
 require_once "../class/gpa_details.php";
 
+// inisialisasi objek gpaDetails
 $gpaDetails = new GpaDetails();
 $data = $gpaDetails->tampil_data();
 $no = 1;
 
 ?>
 
+<!-- memanggil template untuk bagian atas -->
 <?php require_once "../template/header.php"; ?>
     <table class="table table-striped table-dark">
         <tr>
@@ -24,4 +26,5 @@ $no = 1;
         </tr>
         <?php } ?>
     </table>
+<!-- mamanggil template untuk bagian bawah -->
 <?php require_once "../template/footer.php"; ?>

@@ -1,4 +1,5 @@
 <?php 
+// pembuatan class koneksi untuk menghubungkan ke database
 class Koneksi{
     private $host = "localhost";
     private $user = "root";
@@ -6,12 +7,14 @@ class Koneksi{
     private $db = "pweb2_tugas2";
     protected $conn;
 
+    // konstruktor untuk menghubungkan ke database
     public function __construct(){
         $this->conn = mysqli_connect($this->host, $this->user, $this->pass, $this->db);
 
         $this->create_database();
     }
     
+    // metod untuk membuat database agar tidak perlu membuat database secara manual
     public function create_database(){
         
         

@@ -1,12 +1,14 @@
 <?php
 require_once "../class/reports_khusus.php";
 
+// inisialisasi objek ReportsKhusus
 $reports = new ReportsKhusus();
 $data = $reports->tampil_data();
 $no = 1;
 
 ?>
 
+<!-- memanggil template untuk bagian atas -->
 <?php require_once "../template/header.php"; ?>
     <table class="table table-striped table-dark">
         <tr>
@@ -40,4 +42,5 @@ $no = 1;
         </tr>
         <?php } ?>
     </table>
+<!-- memanggil template untuk bagian bawah -->
 <?php require_once "../template/footer.php"; ?>

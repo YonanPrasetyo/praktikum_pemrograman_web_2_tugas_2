@@ -1,11 +1,13 @@
 <?php
 require_once "../class/gpas.php";
 
+// inisialisasi objek Gpas
 $gpas = new Gpas();
 $data = $gpas->tampil_data();
 $no = 1;
 ?>
 
+<!-- memanggil template untuk bagian atas -->
 <?php require_once "../template/header.php"; ?>
     <table class="table table-striped table-dark">
         <tr>
@@ -21,4 +23,6 @@ $no = 1;
         </tr>
         <?php } ?>
     </table>
+
+<!-- memanggil template untuk bagian bawah -->
 <?php require_once "../template/footer.php"; ?>
