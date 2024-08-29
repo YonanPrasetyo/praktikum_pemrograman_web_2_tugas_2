@@ -1,32 +1,14 @@
-<?php 
-include "koneksi.php";
-class Reports extends Database{
-    public function tampil_data(){
-        $sql = "SELECT * FROM reports";
-        $data = mysqli_query($this->conn, $sql);
-        while($row = mysqli_fetch_array($data)){
-            $hasil[] = $row;
-        }
-        return $hasil;
-    }
-}
+<?php
+require_once "../class/reports_khusus.php";
 
-$reports = new Reports();
+$reports = new ReportsKhusus();
 $data = $reports->tampil_data();
 $no = 1;
-$nav = $reports->nav();
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php echo $nav; ?>
-    <table border="1" cellspacing="0">
+<?php require_once "../template/header.php"; ?>
+    <table class="table table-striped table-dark">
         <tr>
             <th>No</th>
             <th>id_warnings</th>
@@ -58,5 +40,4 @@ $nav = $reports->nav();
         </tr>
         <?php } ?>
     </table>
-</body>
-</html>
+<?php require_once "../template/footer.php"; ?>

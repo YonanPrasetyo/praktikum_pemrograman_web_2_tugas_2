@@ -1,34 +1,21 @@
 <?php 
-class Database{
+class Koneksi{
     private $host = "localhost";
     private $user = "root";
     private $pass = "";
     private $db = "pweb2_tugas2";
     protected $conn;
 
-    public function nav(){
-        return 
-        "<nav>".
-            "<a href='gpas.php'>gpa</a>  ".
-            "<a href='gpa_details.php'>gpa details</a>  ".
-            "<a href='reports.php'>reports</a> ".
-            "<a href='gpa_details_gpa3.php'>gpa details khusus</a>  ".
-        "</nav>";
-    }
-
     public function __construct(){
         $this->conn = mysqli_connect($this->host, $this->user, $this->pass, $this->db);
 
-        
-        foreach ($this->create_database() as $key) {
-            mysqli_query($this->conn = mysqli_connect($this->host, $this->user, $this->pass, $this->db), $key);
-        }
+        $this->create_database();
     }
-
+    
     public function create_database(){
-        return 
-        [
-        "CREATE TABLE IF NOT EXISTS gpas (
+        
+        
+        $sql = ["CREATE TABLE IF NOT EXISTS gpas (
             id_gpa INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             id_student INT(6) UNSIGNED NOT NULL,
             cumulative_gpa DECIMAL(4,2) NOT NULL
@@ -54,8 +41,11 @@ class Database{
             has_acc_academic_advisor BOOLEAN NOT NULL,
             has_acc_head_of_program BOOLEAN NOT NULL,
             FOREIGN KEY (`id_gpa_detail`) REFERENCES `gpa_details`(`id_gpa_detail`)
-        )"
-        ];
+        )"];
+
+        foreach ($sql as $key) {
+            mysqli_query($this->conn = mysqli_connect($this->host, $this->user, $this->pass, $this->db), $key);
+        }
     }
 }
 ?>
