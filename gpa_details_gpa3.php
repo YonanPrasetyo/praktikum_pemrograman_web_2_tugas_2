@@ -2,7 +2,7 @@
 include "koneksi.php";
 class GpaDetails extends Database{
     public function tampil_data(){
-        $sql = "SELECT * FROM gpa_details WHERE semester_gpa = 3";
+        $sql = "SELECT * FROM gpa_details WHERE semester_gpa != 3";
         $data = mysqli_query($this->conn, $sql);
         while($row = mysqli_fetch_array($data)){
             $hasil[] = $row;
@@ -14,6 +14,7 @@ class GpaDetails extends Database{
 $gpaDetails = new GpaDetails();
 $data = $gpaDetails->tampil_data();
 $no = 1;
+$nav = $gpaDetails->nav();
 
 ?>
 
@@ -25,11 +26,7 @@ $no = 1;
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <a href="gpas.php">gpa</a>
-        <a href="gpa_details.php">gpa details</a>
-        <a href="reports.php">reports</a>
-    </nav>
+    <?php echo $nav; ?>
     <table border="1" cellspacing="0">
         <tr>
             <th>No</th>

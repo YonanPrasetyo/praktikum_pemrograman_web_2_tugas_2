@@ -14,6 +14,7 @@ class Reports extends Database{
 $reports = new Reports();
 $data = $reports->tampil_data();
 $no = 1;
+$nav = $reports->nav();
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +25,7 @@ $no = 1;
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <a href="gpas.php">gpa</a>
-        <a href="gpa_details.php">gpa details</a>
-        <a href="reports.php">reports</a>
-    </nav>
+    <?php echo $nav; ?>
     <table border="1" cellspacing="0">
         <tr>
             <th>No</th>

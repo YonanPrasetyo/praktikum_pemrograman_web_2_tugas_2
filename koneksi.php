@@ -6,8 +6,20 @@ class Database{
     private $db = "pweb2_tugas2";
     protected $conn;
 
+    public function nav(){
+        return 
+        "<nav>".
+            "<a href='gpas.php'>gpa</a>  ".
+            "<a href='gpa_details.php'>gpa details</a>  ".
+            "<a href='reports.php'>reports</a> ".
+            "<a href='gpa_details_gpa3.php'>gpa details khusus</a>  ".
+        "</nav>";
+    }
+
     public function __construct(){
         $this->conn = mysqli_connect($this->host, $this->user, $this->pass, $this->db);
+
+        
         foreach ($this->create_database() as $key) {
             mysqli_query($this->conn = mysqli_connect($this->host, $this->user, $this->pass, $this->db), $key);
         }
